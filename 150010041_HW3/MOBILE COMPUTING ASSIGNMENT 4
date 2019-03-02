@@ -1,0 +1,36 @@
+
+Sensors Use For Accelerometer and GPS
+Shared Preferences Storage for Activities
+Permanent Storage in CSV files.
+
+
+1. User Information needs to be stored in Shared Preferences -
+    during change of orientation, app navigation and app closure.
+    Create shared preferences for each activity.
+
+2. Check all registration fields are filled. Store user information in shared preferences.
+    Make record screen the main activity.
+
+3. ASK SIR about the ONE ACTIVTIY WITH FRAGMENT PART.
+
+4. In the recording activity, get the label from the user each time he starts recording.
+  Create a file for each recording, and start a service to store data in CSV file.
+
+5. Integrate sensors in app. Implement service for running the app in background
+
+
+
+Modify HW 2 to do the following
+- Persistence of user information and sensor selection even during change of orientation, app navigation, and app closure
+- Check that all the fields in the registration are filled in
+- Action bar contains tabs instead of a spinner and an icon
+- One activity with each tab implemented as a fragment
+- In the activity for recording, get from the user label (stationary or walking) of that activity
+- Save sensor data in CSV files
+- The CSV file contains
+0th row {first name, last name, mobile, email, gender, age}
+1st row {timestamp, lat, long, accelx, accely, accelz, label}
+2nd row onwards contain values as per the format in the 1st row
+- One file for each recording, stored in the data folder of your app
+- Files should be exportable to PC
+- The app should keep collecting data even though the app in not in the foreground (collect data in a background service as a thread)
